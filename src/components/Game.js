@@ -3,6 +3,7 @@ import utils from '../math-utils';
 import StarsDisplay from '../components/StarDisplay';
 import PlayNumber from '../components/PlayNumber';
 import PlayAgain from '../components/PlayAgain';
+import HighScore from '../components/HighScore';
 
 const useGameState = timeLimit => {
   const [stars, setStars] = useState(utils.random(1, 9));
@@ -21,6 +22,7 @@ const useGameState = timeLimit => {
     if (utils.sum(newCandidateNums) !== stars) {
       setCandidateNums(newCandidateNums);
     } else {
+      //TODO: Player scores a point add to REDUX store
       const newAvailableNums = availableNums.filter(
         n => !newCandidateNums.includes(n)
       );
@@ -97,6 +99,7 @@ const Game = props => {
         </div>
       </div>
       <div className="timer">Time Remaining: {secondsLeft}</div>
+      <HighScore />
     </div>
   );
 };

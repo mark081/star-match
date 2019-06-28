@@ -1,3 +1,6 @@
+//TODO: If score is > then HighScore update the score in REDUX
+//TODO: Clear the current score in REDUX
+
 import React from 'react';
 
 const PlayAgain = props => (
