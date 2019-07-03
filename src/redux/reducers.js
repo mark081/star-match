@@ -13,7 +13,7 @@ const todos = (todos = [], action) => {
     case ADD_TODO:
       return [...todos,
         {
-          test: action.text,
+          text: action.text,
           completed: false,
         }];
     case TOGGLE_TODO:
