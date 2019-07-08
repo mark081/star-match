@@ -64,12 +64,20 @@ body {
 }
 
 .timer {
-	color: #666;
+  color: #666;
   margin-top: 3px;
   margin-left: 3px;
 }
 
-.game-done .message {
+.game-done .game-won {
+  color: #728052;
+  font-size: 250%;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.game-done .game-lost {
+  color: #ffccce;
   font-size: 250%;
   font-weight: bold;
   margin: 15px;

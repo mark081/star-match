@@ -2,9 +2,8 @@ import React from 'react';
 
 const PlayAgain = props => (
   <div className="game-done">
-    <div 
-      className="message"
-      style={{ color: props.gameStatus === 'lost' ? 'red' : 'green'}}
+    <div
+      className={props.gameStatus === 'lost' ? 'game-lost' : 'game-won'}
     >
       {props.gameStatus === 'lost' ? 'Game Over' : 'Nice'}
     </div>
